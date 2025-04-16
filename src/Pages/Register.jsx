@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Button from '../components/UI/Button'
 import Input from '../components/UI/Input'
+import { UserRound } from "lucide-react"
 
 
 const Register = () => {
@@ -41,7 +42,12 @@ const Register = () => {
         " 
         >
             <h1 className="text-center text-2xl font-bold mb-6">register Form</h1>
-            <div className=" flex flex-col lg:flex-row justify-between gap-3">
+            <div className="flex justify-center items-center ">
+            <UserRound size={52} className="  bg-white w-30 h-30 rounded-full  p-6"/>
+            </div>
+            <h1 className="text-center text-2xl font-bold mb-6">hello user!</h1>
+           
+            <div className=" flex flex-col lg:flex-row justify-between gap-3 mt-8">
                 <Input
                 label="First name"
                 type="text"
@@ -49,7 +55,7 @@ const Register = () => {
                 onChange={(e)=>setFirstName(e.target.value)}
                 placeholder="enter your first name please"
                 id="firstname"
-                required
+               
                 />
                 <Input
                 label="Last name"
@@ -57,9 +63,7 @@ const Register = () => {
                 value={lastname}
                 onChange={(e)=>setLastName(e.target.value)}
                 placeholder="enter your last name"
-               
                 id="lastname"
-                required
                 />
             </div>
             <div>
@@ -70,7 +74,6 @@ const Register = () => {
                 onChange={(e)=>setEmail(e.target.value)}
                 placeholder="Enter a valid email"
                 id="email"
-                required
                 />
                 <Input
                 label="Password"
@@ -79,7 +82,6 @@ const Register = () => {
                 onChange={(e)=>setPassword(e.target.value)}
                 placeholder="enter a password"
                 id="password"
-                required
                 />
                 <Input
                 label="Confirm Password"
@@ -87,16 +89,12 @@ const Register = () => {
                 value={confirmPassword}
                 onChange={(e)=>setConfirmPassword(e.target.value)}
                 id="confirmPassword"
-                required
                 />
             </div>
             <div className="text-center bg-blue-300 mt-6 rounded-full p-3 hover:bg-white cursor-pointer duration-500 ">
               <Button
               type="submit"
-               className=" text-xl"
-               
-             
-
+              className=" text-xl"
               >
                 Register
                 </Button> 
