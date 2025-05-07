@@ -1,16 +1,22 @@
-import { useState } from 'react'
-
+import React from 'react'
 import './Index.css'
-import Register from './Pages/Register'
+
+import Header  from "./components/UI/header"
+import About from './Pages/about'
+import Projects from './Pages/projects'
+
 
 
 function App() {
   
 
   return (
-    <>
-   <Register/>
-    </>
+    <div className='w-full overflow-hidden font-["Outfit"]'>
+  
+   <Header/> 
+   <About/>
+   <Projects/>
+    </div>
   )
 }
 
